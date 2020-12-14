@@ -1,0 +1,1 @@
+{"mother":{"adult":true,"siblings":[],"name":"Tatiana","age":50},"father":{"adult":true,"siblings":[],"name":"Alex","age":51},"adult":true,"siblings":[{"mother":{"adult":true,"siblings":[],"name":"Tatiana","age":50},"father":{"adult":true,"siblings":[],"name":"Alex","age":51},"adult":true,"siblings":[],"name":"Artem","age":28}],"name":"Rodion","age":18}
