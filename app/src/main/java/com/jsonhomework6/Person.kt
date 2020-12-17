@@ -5,6 +5,8 @@ data class Person(var name: String, var age: Int){
     var mother: Person? = null
     var father: Person? = null
     var adult : Boolean = age >= 18
+    var countOfRelatives = 0
+
 
     var siblings : MutableList<Person> = mutableListOf()     //list of brothers and sisters
         private set
@@ -18,7 +20,9 @@ data class Person(var name: String, var age: Int){
     }
 
     private fun countRelativesWithMe() : Int{
-        var count =  1 + this.siblings.size
+        var count = 1
+        if (this.siblings.size != null){
+            count += this.siblings.size}
         this.father?.let{
             count += it.countRelativesWithMe()
         }
@@ -29,6 +33,6 @@ data class Person(var name: String, var age: Int){
         return count
     }
 
-    fun countRelatives() : Int = countRelativesWithMe() - 1
+    fun getCountRelatives() : Int = countRelativesWithMe() - 1
 
 }

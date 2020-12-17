@@ -20,6 +20,9 @@ fun main() {
     me.mother = Person("Tatiana", 50)
     me.father = Person("Alex", 51)
     me.addSib(Person("Artem", 28))
+    me.countOfRelatives = me.getCountRelatives()
+    me.mother?.countOfRelatives = me.getCountRelatives()
+    me.father?.countOfRelatives = me.getCountRelatives()
 
     println(me.toString())
     println("Brother: ${me.siblings}")
